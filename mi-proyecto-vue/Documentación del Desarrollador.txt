@@ -1,0 +1,258 @@
+# Manual del Programador
+## 1. Resumen del Proyecto
+Nombre del Proyecto: mi-proyecto-vue
+
+Descripción breve: Aplicación web para un taller de artesanía en cuero que permite mostrar productos, servicios, portfolio de trabajos y gestionar contactos de clientes.
+
+Objetivo: Crear una presencia digital para un negocio de artesanía en cuero, permitiendo a los clientes conocer los servicios, ver trabajos realizados y contactar para solicitar presupuestos.
+
+Tecnologías utilizadas:
+
+- Frontend: Vue.js 3.2.13
+- Router: Vue Router 4.0.3
+- Base de datos: Firebase Firestore
+- Storage: Firebase Storage
+- Testing: Vitest 3.2.3 con Vue Test Utils
+- Build: Vue CLI 5.0.0
+- Deploy: Netlify
+- Linting: ESLint
+## 2. Requisitos del Entorno
+Sistema operativo: Windows, macOS, Linux
+
+Versiones de software necesarias:
+
+- Node.js: versión 16 o superior
+- npm: versión 8 o superior
+- Git: para clonar el repositorio
+
+Dependencias externas:
+
+- Cuenta de Firebase con proyecto configurado
+- Cuenta de Netlify para despliegue (opcional)
+- Conexión a internet para Firebase
+
+## 3. Instalación del Entorno de Desarrollo
+### 1. Clonar el repositorio:
+    git clone [URL_DEL_REPOSITORIO] cd mi-proyecto-vue
+
+### 2. Instalar dependencias:
+    npm install
+
+### 4. Inicializar base de datos:
+    npm run seed
+    Este comando ejecuta el script de datos semilla para poblar Firestore.
+
+### 5. Ejecutar el proyecto:
+    npm run dev
+    # o
+    npm run serve
+
+La aplicación estará disponible en http://localhost:8080
+
+
+## 4. Estructura del Proyecto
+
+mi-proyecto-vue/
+├── public/                 # Archivos estáticos
+│   ├── favicon.ico
+│   └── index.html
+├── src/
+│   ├── assets/            # Recursos estáticos (imágenes, etc.)
+│   ├── components/        # Componentes reutilizables
+│   │   ├── HelloWorld.vue
+│   │   └── Navbar.vue
+│   ├── views/             # Páginas/vistas principales
+│   │   ├── Home.vue       # Página principal
+│   │   ├── About.vue      # Página sobre nosotros
+│   │   ├── Products.vue   # Catálogo de productos
+│   │   ├── Portfolio.vue  # Portfolio de trabajos
+│   │   └── Contact.vue    # Formulario de contacto
+│   ├── router/            # Configuración de rutas
+│   │   └── index.js
+│   ├── services/          # Servicios de datos
+│   │   └── firestoreService.js
+│   ├── utils/             # Utilidades
+│   │   └── seedData.js    # Datos semilla
+│   ├── firebase.js        # Configuración Firebase
+│   ├── main.js           # Punto de entrada
+│   └── App.vue           # Componente raíz
+├── tests/                 # Pruebas unitarias
+│   ├── components/
+│   ├── services/
+│   ├── views/
+│   └── setup.js
+├── package.json
+├── vitest.config.js      # Configuración de testing
+├── netlify.toml          # Configuración de despliegue
+└── README.md
+
+## 5. Base de Datos
+
+Sistema: Firebase Firestore (NoSQL)
+Colecciones principales:
+
+- Categorias : Categorías de productos/servicios
+- Materiales : Tipos de materiales utilizados
+- Trabajos : Portfolio de trabajos realizados
+- Contactos : Mensajes de contacto de clientes
+- site_info : Información general del sitio
+Modelo de datos:
+
+// Categorias
+{
+  id: string,
+  name: string,
+  description: string,
+  active: boolean,
+  order: number
+}
+
+// Materiales
+{
+  id: string,
+  name: string,
+  description: string,
+  active: boolean
+}
+
+// Trabajos
+{
+  id: string,
+  title: string,
+  description: string,
+  category: string,
+  date: string,
+  featured: boolean,
+  active: boolean,
+  order: number
+}
+
+// Contactos
+{
+  id: string,
+  nombre: string,
+  email: string,
+  mensaje: string,
+  timestamp: Date,
+  status: string
+}
+
+Scripts de migración: Utilizar npm run seed para poblar la base de datos con datos de ejemplo.
+
+## 6. API / Interfaces
+
+Servicios principales (firestoreService.js):
+
+// Obtener categorías
+getCategorias(): Promise<Array>
+
+// Obtener materiales
+getMateriales(): Promise<Array>
+
+// Obtener trabajos
+getTrabajos(): Promise<Array>
+getTrabajosFeatured(): Promise<Array>
+getTrabajosByCategory(category): Promise<Array>
+
+// Enviar contacto
+enviarContacto(contactData): Promise<string>
+
+// Obtener información del sitio
+getSiteInfo(): Promise<Object>
+
+Ejemplos de uso:
+
+import FirestoreService from '@/services/firestoreService'
+
+// Obtener categorías
+const categorias = await FirestoreService.getCategorias()
+
+// Enviar contacto
+const contactId = await FirestoreService.enviarContacto({
+  nombre: 'Juan Pérez',
+  email: 'juan@email.com',
+  mensaje: 'Consulta sobre productos'
+})
+
+
+## 7. Lógica del Negocio
+Flujo principal:
+
+1. Usuario visita la página principal (Home)
+2. Navega por productos/servicios (Products)
+3. Ve portfolio de trabajos (Portfolio)
+4. Contacta a través del formulario (Contact)
+5. Los mensajes se almacenan en Firestore
+
+Componentes clave:
+
+- Navbar: Navegación principal
+- Home: Landing page con servicios destacados
+- Products: Catálogo filtrable por categorías
+- Portfolio: Galería de trabajos realizados
+- Contact: Formulario de contacto
+- firestoreService: Capa de abstracción para Firebase
+
+
+## 8. Pruebas
+Framework: Vitest con Vue Test Utils
+
+Ejecutar pruebas:
+
+# Ejecutar todas las pruebas
+npm run test
+
+# Ejecutar pruebas con interfaz visual
+npm run test:ui
+
+# Ejecutar pruebas una vez
+npm run test:run
+
+
+Cobertura:
+
+- Componentes: Navbar, Home
+- Servicios: firestoreService
+- Vistas: Home, Products
+Configuración: `vitest.config.js`
+
+## 9. Despliegue
+Entornos disponibles:
+
+- Desarrollo: npm run dev (localhost:8080)
+- Producción: Netlify
+Pasos de build:
+
+npm run build
+
+Genera archivos optimizados en la carpeta dist/
+
+Deploy en Netlify:
+
+1. Configuración en `netlify.toml`
+2. Base directory: mi-proyecto-vue
+3. Build command: npm run build
+4. Publish directory: dist
+5. Node version: 16
+
+CI/CD:
+
+- Netlify se conecta automáticamente al repositorio Git
+- Deploy automático en cada push a la rama principal
+- Preview deployments para pull requests
+
+## Scripts Disponibles
+
+npm run dev          # Servidor de desarrollo
+npm run build        # Build para producción
+npm run lint         # Linting del código
+npm run seed         # Poblar base de datos
+npm run test         # Ejecutar pruebas
+npm run test:ui      # Interfaz visual de pruebas
+
+## Notas Adicionales
+- El proyecto usa Vue 3 con Composition API
+- Firebase está configurado para el proyecto "proyectovue-72222"
+- Las rutas usan lazy loading para optimizar la carga
+- El proyecto incluye configuración de ESLint para mantener calidad de código
+- Los tests incluyen mocks de Firebase para pruebas aisladas

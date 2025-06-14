@@ -1,0 +1,208 @@
+# Manual de Usuario - ArteCuero
+## 1. Introducción
+### Descripción general del sistema
+ArteCuero es una aplicación web desarrollada para un taller de artesanía en cuero que permite a los usuarios explorar servicios, productos, trabajos realizados y contactar con el negocio. La plataforma está diseñada para mostrar la experiencia y calidad del taller, facilitando la comunicación entre clientes y artesanos.
+
+### Objetivo del manual
+Este manual tiene como objetivo guiar a los usuarios finales en el uso correcto y eficiente de la aplicación web ArteCuero, proporcionando instrucciones claras para navegar por todas las funcionalidades disponibles.
+
+### Público objetivo
+- Clientes potenciales interesados en servicios de artesanía en cuero
+- Usuarios que buscan reparación de calzado y artículos de cuero
+- Artesanos que necesitan materiales especializados
+- Personas interesadas en trabajos personalizados
+
+## 2. Requisitos del Sistema
+### Hardware mínimo requerido
+- Computadora : Procesador de 1 GHz o superior, 2 GB de RAM
+- Dispositivo móvil : Android 5.0+ o iOS 10+
+- Pantalla : Resolución mínima de 320x568 píxeles
+### Software necesario
+- Navegadores web compatibles :
+  - Google Chrome 70+
+  - Mozilla Firefox 65+
+  - Safari 12+
+  - Microsoft Edge 79+
+- Sistema operativo : Windows 7+, macOS 10.12+, Linux (distribuciones modernas)
+### Requisitos de conexión
+- Conexión a internet estable (mínimo 1 Mbps)
+- JavaScript habilitado en el navegador
+- Cookies habilitadas para el correcto funcionamiento
+
+## 3. Instalación del Software
+### Pasos para la instalación
+ArteCuero es una aplicación web que no requiere instalación . Para acceder:
+
+1. Abra su navegador web preferido
+2. Ingrese la URL de la aplicación en la barra de direcciones
+3. Presione Enter para cargar la página
+### Configuración inicial
+- No se requiere configuración inicial para usuarios finales
+- La aplicación se carga automáticamente con todas las funcionalidades disponibles
+- Se recomienda agregar la página a favoritos para acceso rápido
+### Resolución de problemas comunes durante la instalación
+- Página no carga : Verifique su conexión a internet
+- Elementos no se muestran correctamente : Actualice su navegador o pruebe con otro
+- Funcionalidades no responden : Habilite JavaScript en su navegador
+- Problemas de visualización : Limpie la caché del navegador
+
+## 4. Inicio de Sesión
+### Procedimiento para ingresar al sistema
+ArteCuero es una aplicación de acceso público que no requiere registro ni inicio de sesión para usuarios finales. Simplemente:
+
+1. Acceda a la URL de la aplicación
+2. La página principal se cargará automáticamente
+3. Todas las funcionalidades están disponibles inmediatamente
+### Recuperación de contraseña
+No aplica - La aplicación no requiere autenticación de usuarios.
+
+### Cierre de sesión
+No aplica - Simplemente cierre la pestaña del navegador cuando termine de usar la aplicación.
+
+
+## 5. Navegación por la Interfaz
+### Descripción de la pantalla principal
+La página principal (Home) presenta:
+
+- Sección Hero : Título principal "Artesanía en Cuero" con imagen destacada
+- Servicios : Tres tarjetas principales:
+  - Reparación de Calzado
+  - Artículos de Cuero
+  - Restauración
+- Llamada a la acción : Botones para contactar y solicitar presupuesto
+### Menús y secciones
+La barra de navegación superior incluye:
+
+- INICIO : Página principal con información general
+- SOBRE NOSOTROS : Información sobre el taller y artesanos
+- PRODUCTOS : Catálogo de productos y materiales disponibles
+- TRABAJOS : Portfolio de trabajos realizados
+- CONTÁCTANOS : Formulario de contacto e información
+### Íconos y botones principales
+- Logo "ArteCuero" : Enlace a la página principal
+- Menú hamburguesa (📱): Navegación en dispositivos móviles
+- Botones CTA : "Contáctanos" y "Solicitar Presupuesto"
+- Enlaces de navegación : Texto subrayado en color marrón 
+
+## 6. Funcionalidades del Sistema
+### Acciones disponibles para el usuario 6.1 Explorar Servicios (Página Principal)
+- Visualizar los tres servicios principales del taller
+- Acceder a información detallada de cada servicio
+- Navegar a la sección de contacto directamente 6.2 Consultar Productos
+- Ver catálogo de productos organizados por categorías
+- Consultar materiales disponibles para artesanos
+- Visualizar precios y disponibilidad de stock
+- Filtrar productos por tipo 6.3 Explorar Portfolio de Trabajos
+- Ver galería de trabajos realizados
+- Filtrar proyectos por categoría
+- Consultar detalles de cada proyecto (duración, descripción, etiquetas)
+- Identificar trabajos destacados 6.4 Contactar con el Taller
+- Completar formulario de contacto con:
+  - Nombre (obligatorio)
+  - Email (obligatorio)
+  - Asunto (obligatorio)
+  - Mensaje (obligatorio)
+- Consultar información de contacto:
+  - Dirección física
+  - Teléfono
+  - Email
+  - Horarios de atención
+- Contactar vía WhatsApp (enlace directo)
+
+### Cómo realizar tareas comunes 
+Solicitar un presupuesto:
+1. Haga clic en "Solicitar Presupuesto" desde la página principal
+2. Complete el formulario de contacto
+3. Describa detalladamente su proyecto en el campo "Mensaje"
+4. Haga clic en "Enviar Mensaje" 
+
+Consultar trabajos similares:
+1. Navegue a la sección "TRABAJOS"
+2. Use los filtros de categoría para encontrar proyectos similares
+3. Revise los detalles de proyectos relevantes
+4. Contacte para discutir su proyecto específico 
+
+Verificar disponibilidad de materiales:
+1. Vaya a la sección "PRODUCTOS"
+2. Revise la sección "Materiales para Artesanos"
+3. Consulte el stock disponible
+4. Contacte para confirmar disponibilidad actual
+
+### Consejos para el uso eficiente del sistema
+- Navegación móvil : Use el menú hamburguesa en dispositivos pequeños
+- Formulario de contacto : Sea específico en sus consultas para obtener respuestas más precisas
+- Portfolio : Use los filtros para encontrar rápidamente trabajos de su interés
+- WhatsApp : Use esta opción para consultas rápidas y respuestas inmediatas
+
+## 7. Mensajes y Errores Comunes
+### Listado de mensajes comunes y su significado
+- "Cargando productos..." : El sistema está obteniendo información de la base de datos
+- "Cargando trabajos..." : Se están cargando los proyectos del portfolio
+- "Enviando..." : Su mensaje de contacto se está procesando
+- "Mensaje enviado exitosamente" : Su consulta fue recibida correctamente
+### Cómo actuar frente a errores frecuentes
+- "Error cargando productos" :
+  
+  - Verifique su conexión a internet
+  - Actualice la página (F5 o Ctrl+R)
+  - Intente nuevamente en unos minutos
+- "Error cargando trabajos" :
+  
+  - Mismas acciones que el error anterior
+  - Si persiste, contacte por WhatsApp
+- "Error enviando mensaje" :
+  
+  - Verifique que todos los campos obligatorios estén completos
+  - Confirme que el email tenga formato válido
+  - Intente enviar nuevamente
+  - Como alternativa, use WhatsApp o llame directamente
+- Página no responde :
+  
+  - Cierre y abra nuevamente el navegador
+  - Limpie la caché del navegador
+  - Pruebe con un navegador diferente
+
+## 8. Soporte Técnico
+
+### Información de contacto
+- WhatsApp : Disponible a través del botón en la sección de contacto
+- Email : Consulte la información en la página de contacto
+- Teléfono : Número disponible en la sección de contacto
+- Dirección : Ubicación física del taller para visitas presenciales
+
+### Horario de atención
+- Lunes a Viernes : Horario mostrado en la página de contacto
+- Sábados : Horario reducido según se indica en el sitio
+- Domingos : Generalmente cerrado (confirmar en la página)
+
+### Cómo reportar problemas o errores
+1. Problemas técnicos del sitio web :
+   
+   - Use el formulario de contacto especificando el problema
+   - Incluya información sobre su navegador y dispositivo
+   - Describa los pasos que llevaron al error
+2. Consultas sobre servicios :
+   
+   - Use WhatsApp para respuestas rápidas
+   - Llame directamente durante horario de atención
+   - Visite el taller para consultas complejas
+
+## 9. Seguridad y Privacidad
+
+### Buenas prácticas para mantener la seguridad
+- Navegación segura : Verifique que la URL sea la correcta antes de ingresar información
+- Información personal : Solo proporcione datos necesarios en el formulario de contacto
+- Dispositivos públicos : No guarde información personal en computadoras compartidas
+- Actualizaciones : Mantenga su navegador actualizado para mejor seguridad
+
+### Protección de datos del usuario
+- Información mínima : El sistema solo solicita datos esenciales para el contacto
+- No almacenamiento local : La aplicación no guarda información personal en su dispositivo
+- Uso responsable : Los datos proporcionados se usan únicamente para responder consultas
+- Confidencialidad : La información de contacto se maneja con total confidencialidad
+
+### Recomendaciones adicionales
+- Revise periódicamente la configuración de privacidad de su navegador
+- Use conexiones seguras (evite WiFi público para información sensible)
+- Contacte inmediatamente si sospecha uso indebido de su información
+- Mantenga actualizada su información de contacto para recibir respuestas
