@@ -1,9 +1,8 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs, addDoc, doc, updateDoc, deleteDoc, query, where, orderBy } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
-// Your web app's Firebase configuration
+// mi configuracion web app's Firebase 
 const firebaseConfig = {
     apiKey: "AIzaSyBjEp3-XyH49UdAyStPbxpjFOqgc0KKV5M",
     authDomain: "proyectovue-72222.firebaseapp.com",
@@ -14,12 +13,12 @@ const firebaseConfig = {
     measurementId: "G-97QX8SFE09"
 };
 
-// Initialize Firebase
+// Iniciamos Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const storage = getStorage(app);
 
-// Export functions for easy use
+// Exporto las funciones para usar
 export { 
     db, 
     storage, 

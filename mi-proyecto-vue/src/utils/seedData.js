@@ -1,4 +1,5 @@
-import FirestoreService from '../services/firestoreService.js';
+
+// import FirestoreService from '../services/firestoreService.js';
 import { addDoc, collection, db } from '../firebase.js';
 
 const categorias = [
