@@ -18,6 +18,6 @@ export default {
 
 <style>
 #app {
-  padding-top: 80px; /* Add space for fixed navbar */
+  padding-top: 80px; /* Agregar espacio para la barra de navegación fija */
 }
 </style>

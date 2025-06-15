@@ -1,6 +1,7 @@
+import { vi } from 'vitest'
 import { config } from '@vue/test-utils'
 
-// Mock de Firebase para evitar conexiones reales durante las pruebas
+// Simulación de Firebase para evitar conexiones reales durante las pruebas
 const mockFirestore = {
   collection: vi.fn(),
   getDocs: vi.fn(),
@@ -9,7 +10,7 @@ const mockFirestore = {
   where: vi.fn()
 }
 
-// Mock global de Firebase
+// Simulación global de Firebase
 vi.mock('../src/firebase.js', () => ({
   db: mockFirestore,
   collection: mockFirestore.collection,

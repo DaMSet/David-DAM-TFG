@@ -3,7 +3,7 @@ import { mount } from '@vue/test-utils'
 import { createRouter, createWebHistory } from 'vue-router'
 import Navbar from '@/components/Navbar.vue'
 
-// Mock del router
+// Simulación del router
 const router = createRouter({
   history: createWebHistory(),
   routes: [

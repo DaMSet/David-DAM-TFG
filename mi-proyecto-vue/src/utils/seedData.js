@@ -98,9 +98,7 @@ const materiales = [
       }
 ];
 
-const siteInfo = {
 
-};
 
 const trabajos = [
   {
@@ -201,7 +199,7 @@ export async function seedDatabase() {
     }
     
     // Agregar site_info
-    await addDoc(collection(db, 'site_info'), siteInfo);
+    //await addDoc(collection(db, 'site_info'), siteInfo);
     
     console.log('Datos agregados exitosamente!');
   } catch (error) {
